@@ -15,7 +15,7 @@ class FoodAnalyzerGUI:
     def __init__(self):
         self.root = ctk.CTk()
         self.root.title("AI 음식 분석기")
-        self.root.geometry("1300x850")
+        self.root.geometry("1400x950")
         self.root.minsize(900, 600)
 
         self.image_path = None
@@ -254,14 +254,31 @@ class FoodAnalyzerGUI:
             else:
                 amount_scale = ratio / q4_ratio
 
-            base_weight = food_info.get("base_weight_g", 100)
+            # ==========================
+            # 중량 및 영양성분 비례 계산 (None값 안전 처리 적용)
+            # ==========================
+            # JSON에서 값이 null(None)로 올 경우 0으로 안전하게 변환하는 헬퍼 함수
+            def get_nutri(key, default_val=0):
+                val = food_info.get(key)
+                return val if val is not None else default_val
+
+            base_weight = get_nutri("base_weight_g", 100)
             weight_g = base_weight * amount_scale
 
-            kcal = food_info.get("kcal", 0) * amount_scale
-            carb = food_info.get("carbohydrate_g", 0) * amount_scale
-            protein = food_info.get("protein_g", 0) * amount_scale
-            fat = food_info.get("fat_g", 0) * amount_scale
-            sodium = food_info.get("sodium_mg", 0) * amount_scale
+            kcal = get_nutri("kcal") * amount_scale
+            carb = get_nutri("carb_g") * amount_scale
+            protein = get_nutri("protein_g") * amount_scale
+            fat = get_nutri("fat_g") * amount_scale
+            sodium = get_nutri("natrium_mg") * amount_scale
+            sugar = get_nutri("sugar_g") * amount_scale
+            calcium = get_nutri("calcium_mg") * amount_scale
+            potassium = get_nutri("potassium_mg") * amount_scale
+            magnesium = get_nutri("magnesium_mg") * amount_scale
+            phosphorus = get_nutri("phosphorus_mg") * amount_scale
+            iron = get_nutri("iron_mg") * amount_scale
+            zinc = get_nutri("zinc_mg") * amount_scale
+            cholesterol = get_nutri("cholesterol_mg") * amount_scale
+            transfat = get_nutri("transfat_g") * amount_scale
 
             img_array = np.fromfile(self.image_path, np.uint8)
             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
@@ -305,6 +322,16 @@ Q4 기준 : {q4_ratio}
 🍗 단백질 : {protein:.1f} g
 🥑 지방 : {fat:.1f} g
 🧂 나트륨 : {sodium:.1f} mg
+🍬 당류 : {sugar:.1f} g
+🦴 칼슘 : {calcium:.1f} mg
+🍌 칼륨 : {potassium:.1f} mg
+🌱 마그네슘 : {magnesium:.1f} mg
+🐟 인 : {phosphorus:.1f} mg
+🩸 철 : {iron:.1f} mg
+💪 아연 : {zinc:.1f} mg
+🍳 콜레스테롤 : {cholesterol:.1f} mg
+🍟 트랜스지방 : {transfat:.1f} g
+
 """
             )
 
