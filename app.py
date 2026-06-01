@@ -25,11 +25,11 @@ class FoodAnalyzerGUI:
         
         # 미리 넣어둘 샘플 이미지 경로도 실행 위치 기준으로 변경 (필요 시 수정하여 사용)
         self.sample_images = {
-            "🍙 샘플 1: 뚝배기 갈비탕": os.path.join(self.base_dir, "test_images", "side_비빔밥덮밥류_냉면기_전주비빔밥_Q5_00025.jpg"),
-            "🍛 샘플 2: 새우튀김": os.path.join(self.base_dir, "test_images", "side_기타튀김_접시_새우튀김_Q4_00026.jpg"),
-            "🥗 샘플 3: 김밥": os.path.join(self.base_dir, "test_images", "side_주먹밥김밥류_접시_김밥_Q3_00001.jpg"),
-            "🍜 샘플 4: 참치마요 삼각김밥": os.path.join(self.base_dir, "test_images", "side_주먹밥김밥류_접시_참치마요삼각김밥_Q2_00047.jpg"),
-            "🍣 샘플 5: 파전": os.path.join(self.base_dir, "test_images", "top_부침개류_접시_파전_Q1_00003.jpg")
+            "샘플 1: 감자튀김": os.path.join(self.base_dir, "test_images", "side_기타튀김_배달종이박스_감자튀김(스틱형)_Q3_00008.jpg"),
+            "샘플 2: 콩국수": os.path.join(self.base_dir, "test_images", "side_국물면류_원형배달_콩국수_Q5_00002.jpg"),
+            "샘플 3: 순대볶음": os.path.join(self.base_dir, "test_images", "top_육류부피_사각배달_순대볶음_Q4_00001.jpg"),
+            "샘플 4: 어묵볶음": os.path.join(self.base_dir, "test_images", "side_반찬부피_접시_어묵볶음_Q1_00007.jpg"),
+            "샘플 5: 파전": os.path.join(self.base_dir, "test_images", "side_기타튀김_접시_새우튀김_Q2_00001.jpg")
         }
         
         # ==========================================
