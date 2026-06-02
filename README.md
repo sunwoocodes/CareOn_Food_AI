@@ -88,8 +88,6 @@ Result Visualization
 
 <img src="docs/result.png" width="800">
 
-> screenshots 폴더 생성 후 실제 캡처 이미지 넣기
-
 ---
 
 ## ⚙️ Tech Stack
