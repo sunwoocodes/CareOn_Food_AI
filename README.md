@@ -143,6 +143,7 @@ FoodAnalyzer/
 ├── test_images/
 │
 └── docs/
+    ├── demo.gif
     ├── main.png
     ├── result.png
     ├── rfood_model_results.png
@@ -308,7 +309,6 @@ python app.py
 * Segmentation 기반 음식 영역 추출
 * 3D Volume Estimation
 * 모바일 앱 연동
-* 실시간 카메라 분석
 * 클라우드 기반 서비스 구축
 
 ---
