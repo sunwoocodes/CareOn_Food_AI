@@ -20,7 +20,7 @@ class FoodAnalyzerGUI:
 
         self.image_path = None
         
-        # 💡 [핵심] 현재 이 파이썬 파일(app.py)이 실행되는 폴더의 절대 경로를 자동으로 가져옵니다.
+        # 현재 이 파이썬 파일(app.py)이 실행되는 폴더의 절대 경로를 자동으로 가져옴.
         self.base_dir = os.path.dirname(os.path.abspath(__file__))
         
         # 미리 넣어둘 샘플 이미지 경로도 실행 위치 기준으로 변경 (필요 시 수정하여 사용)
