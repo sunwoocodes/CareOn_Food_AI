@@ -9,14 +9,6 @@
 
 ---
 
-## Demo
-
-<p align="center">
-  <img src="docs/demo.gif" width="900">
-</p>
-
----
-
 ## 📖 Overview
 
 식단 관리 서비스는 사용자가 음식명과 섭취량을 직접 입력해야 하는 불편함이 존재합니다.
@@ -29,6 +21,14 @@
 * 영양성분 분석
 
 을 수행하여 사용자의 식단 기록 과정을 자동화하는 것을 목표로 합니다.
+
+---
+
+## Demo
+
+<p align="center">
+  <img src="docs/demo.gif" width="900">
+</p>
 
 ---
 
