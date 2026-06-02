@@ -9,6 +9,14 @@
 
 ---
 
+## Demo
+
+<p align="center">
+  <img src="docs/demo.gif" width="900">
+</p>
+
+---
+
 ## 📖 Overview
 
 식단 관리 서비스는 사용자가 음식명과 섭취량을 직접 입력해야 하는 불편함이 존재합니다.
@@ -51,11 +59,11 @@ Input Image
      │
      ▼
 Food Detection Model
-(YOLOv8)
+(YOLOv8s)
      │
      ▼
 Reference Detection Model
-(YOLOv8)
+(YOLOv8n)
      │
      ▼
 Area Ratio Calculation
